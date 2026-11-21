@@ -1,13 +1,6 @@
 # REPORT — what the measurement showed, who it affects, and whose responsibility it is
 
-The guiding questions are prompts, not a form: you do not have to answer each one in turn, and
-answering them without evidence from your run earns nothing.
-
 ## 1. Measurement read-out
-
-(Dimension: Evidence of Specific Impact.)
-
-Guiding questions:
 
 I measured the supplied agent (Qwen2.5-3B-Instruct, greedy decoding, prompt v1) on 40 matched pairs per
 attribute (200 pairs, 400 profiles). All 400 replies were parsed (0 unparseable). The agent is very lenient:
@@ -64,8 +57,6 @@ universities it has never seen, or a different model. Because the order probe sh
 
 ## 2. Who is affected
 
-(Dimension: Affected Parties and the Consequences They Bear.)
-
 **Wrongly rejected applicants.** Regional-university applicants score 2.5 points lower than identical flagship
 applicants. Usually this does not matter, but for an applicant near score 45 it can decide the outcome. In the
 gender pairs, the 4 flips all went against male-coded names (not significant, p = 0.125). In Part 4 the bare
@@ -97,8 +88,6 @@ original reason is lost. If the form of the application changes from year to yea
 the same kind of applicant without anyone noticing.
 
 ## 3. Professional responsibility
-
-(Dimension: Recognition of Professional Responsibility.)
 
 **What I must check before it runs.** The prompt layout must be fixed and tested, because layout alone flipped
 10 of 40 identical applicants. The escalation band must be recalibrated on the configuration that is really
