@@ -185,3 +185,10 @@ recalibration shows a clear gap between the two decisions.
 Closing these gaps needs a larger measurement (more pairs, prompts, layouts and models), a recalibrated band,
 test cases for every rule, an appeal process and a secured log. I did not do it because it is outside the time
 and scope of this lab.
+
+## AI Declaration
+
+I used an AI assistant only to understand the code and the theory in general.
+I did not use it to write my predictions, observations, report, justification, or control register. All conclusions are my own: I ran every cell myself and wrote the submitted text in my own
+words from the numbers the notebook printed. For specific wording I used Yandex Translate to check individual
+English phrases. The ideas, analysis, and decisions are mine.
