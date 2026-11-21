@@ -52,6 +52,8 @@ The guiding questions are prompts, not a form.
 
 ## 4. The legal constraints
 
+Prediction (before the search): the hardest controls to tie to a specific legal provision will be validate_input and my own refusal rule against instructions in free-text fields. I expect that laws talk about "reliability", "security" and "protection against failures" in general words, but do not say "check that GPA is between 0 and 4" or "refuse text that looks like a prompt injection". The width of the escalation band will also be hard: I expect a law can require human control, but it will not say what share of applicants a person must review.
+
 (Dimension: Identification and Citation of Legal Constraints.)
 
 - Which instruments apply to an automated screening decision about people, and why do they
