@@ -1,19 +1,6 @@
 # JUSTIFICATION — the design of the harness, and why
 
-Two rules for the whole document:
-
-- **Every claim about a law needs a citation to the instrument and the provision** it rests on,
-  written so a reader can find the text. You identify the instruments yourself, from the primary text.
-  A chat model's statement is not a citation.
-- **Everything you describe must be in the code or in the submitted run.** A control you describe
-  but did not build, or a refusal you state but never triggered, belongs under "what the design still
-  fails to protect against".
-
-The guiding questions are prompts, not a form.
-
 ## 1. What the system may do
-
-(Dimension: Integration of Constraints into the Design.)
 
 **Purpose.** The system screens applications for one purpose only: scholarship screening for the Tulpar
 Scholarship Fund (`ALLOWED_PURPOSES = {"scholarship_screening"}`). It may give a shortlist or reject
@@ -37,8 +24,6 @@ that zone instead of the default (45, 60). The rule that personal data must not 
 basis made me refuse requests without consent before any model call, not after.
 
 ## 2. What it must refuse
-
-(Dimension: Refusal Boundaries and Enforcement.)
 
 | request | code | where enforced | fired in my run |
 |---|---|---|---|
@@ -68,8 +53,6 @@ a human decision. This is a gap (section 6).
 
 ## 3. What record it keeps
 
-(Dimension: Accountability Record and Auditability.)
-
 **Audit question.** Why did this applicant get this outcome, and can someone else reconstruct it without
 re-running the model?
 
@@ -94,10 +77,6 @@ staff, and a tamper check (for example a hash of each record chained to the prev
 show why the model gave a score, and it cannot show what decision the model would give with another layout.
 
 ## 4. The legal constraints
-
-Prediction (before the search): the hardest controls to tie to a specific legal provision will be validate_input and my own refusal rule against instructions in free-text fields. I expect that laws talk about "reliability", "security" and "protection against failures" in general words, but do not say "check that GPA is between 0 and 4" or "refuse text that looks like a prompt injection". The width of the escalation band will also be hard: I expect a law can require human control, but it will not say what share of applicants a person must review.
-
-(Dimension: Identification and Citation of Legal Constraints.)
 
 Prediction (before the search): the hardest controls to tie to a specific legal provision will be validate_input
 and my own refusal rule against instructions in free-text fields. I expect that laws talk about "reliability",
@@ -137,10 +116,7 @@ benchmarks. Under the EU AI Act, AI used for access to education is listed as hi
 **Where I did more than the law requires.** No law requires refusing instructions in free-text fields, a
 specific band, or a matched-pair test; I added them because of my own measurement and Part 4.
 
-
 ## 5. The ethical principles
-
-(Dimension: Identification of Applicable Ethical Principles.)
 
 Source: UNESCO Recommendation on the Ethics of Artificial Intelligence (2021), adopted by the UNESCO General
 Conference. It is not legally binding; it is a recommendation to member states.
@@ -164,8 +140,6 @@ person, or that a model must be tested for sensitivity to layout before use. The
 applicants flipped) shows that fairness asks for both.
 
 ## 6. The trade-offs
-
-(Dimension: Trade-off Analysis and Justification.)
 
 | control | cost (measured) | harm it prevents |
 |---|---|---|
@@ -211,11 +185,3 @@ recalibration shows a clear gap between the two decisions.
 Closing these gaps needs a larger measurement (more pairs, prompts, layouts and models), a recalibrated band,
 test cases for every rule, an appeal process and a secured log. I did not do it because it is outside the time
 and scope of this lab.
-
-## AI-use declaration
-
-I used an AI assistant only to understand the code and the theory in general.
-I did not use it to write my predictions, observations, report, justification, or control register, and I did
-not copy its text. All conclusions are my own. I ran every cell myself and wrote the submitted text in my own
-words from the numbers the notebook printed. For specific wording I used Yandex Translate to check individual
-English phrases. The ideas, analysis, and decisions are mine.
